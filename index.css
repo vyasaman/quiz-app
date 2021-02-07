@@ -1,0 +1,128 @@
+body{
+    background-color: rgb(95, 123, 155);
+}
+
+.main{
+    background-color: rgb(185, 185, 185);
+    width: 40em;
+    height: 30em;
+    position: absolute;
+    top: 6em;
+    left: 20em;
+    border-radius: 1em;
+}
+#login{
+    display: block;
+}
+.login>form{
+    margin-left: 10em;
+}
+#login>h1{
+    margin-left: 2.5em
+}
+#dashboard{
+    display: none;
+    position: relative;
+}
+#dashboard>h1{
+    margin-left: -2em;
+    margin-top: 1em;
+    width: 12em;
+    text-align: center;
+}
+#test1{
+    display: none;
+}
+#test2{
+    display: none;
+}
+#test3{
+    display: none;
+}
+#test4{
+    display: none;
+}
+#test5{
+    display: none;
+}
+.test{
+    position: relative;
+    left: -3em;
+}
+.test>button{
+    width: 26.5em;
+    height: 3em;
+    background-color: rgb(49, 153, 122);
+    color: aliceblue;
+}
+.test>button:hover{
+    background-color: rgb(43, 107, 89);
+    border: solid rgb(3, 51, 37);
+}
+.logout{
+    position: relative;
+    top: -3em;
+    left: 24.8em;
+    font-size: 1em;
+}
+.back{
+    position: relative;
+    top: -3em;
+    left: -14.6em;
+    width: 5em;
+}
+#login>button{
+    margin-left: 5.5em;
+    width: 8em;
+}
+#id{
+    border-radius: 5px;
+    border-width: 1px;
+    height: 2em;
+    margin-top: 4em;
+}
+#pass{
+    border-radius: 5px;
+    border-width: 1px;
+    height: 2em;
+}
+.take-test{
+    position: relative;
+    height: 5em;
+    width: 15em;
+    top: 2em;
+    left: 2em;
+}
+.result{    
+    position: relative;
+    height: 5em;
+    width: 15em;
+    left: 2em;
+    top: 2em;
+}
+#end{
+    display: none;
+    position: relative;
+    top: 13em;
+    left: 5em;
+}
+#end>button{
+    position: relative;
+    top: 6em;
+    left: 24em;
+}
+#result{
+    display: none;
+    position: relative; 
+    left: 9em;   
+}
+#result>button{
+    position: relative;
+    top: -3em;
+    left: 25em;
+}
+#table{
+    position: relative;
+    width: 35em;
+    left: -7em;
+}

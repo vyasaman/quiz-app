@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="../jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="login">
+            <form action="" id="login" class="form-group">
+                <br><br>
+                <h1>Login</h1>
+                <br><br><input type="email" size="40" name="" id="id" placeholder="Enter Username/Email Address">
+                <br><br><input type="password" size="40" placeholder="Enter Password" name="" id="pass"><br><br>
+                <button type="button" class="btn btn-success" onclick="login()">Login</button>
+            </form>
+
+
+            <form action="" id="dashboard">
+
+                <h1 class="border-bottom border-dark">Dashboard</h1>
+                <button type="button" href="" class="btn btn-danger logout" onclick="logout()">Logout</button>
+                <br><br><button type="button" class="btn btn-primary take-test" onclick="test()">Take
+                    Test</button><br><br>
+                <button type="button" class="btn btn-primary result" onclick="result()">Results</button>
+                <br><br>
+            </form>
+
+            <form action="" id="test1" class="test">
+                <br><br><br>
+                <h3>Which of these in not a core data type?</h3><br><br>
+                <button class="btn" type="button" onclick="nextQues('test1','test2')">List</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test1','test2')">Dictionary</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test1','test2')">Tuples</button><br><br>
+                <button class="btn" type="button" onclick="next('test1','test2')">Class</button><br><br>
+            </form>
+
+
+            <form action="" id="test2" class="test">
+                <br><br>
+                <h3>Given a function that does not return any value, What value is thrown by default when executed in
+                    shell.</h3><br><br>
+                <button class="btn" type="button" onclick="nextQues('test2','test3')">int</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test2','test3')">bool</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test2','test3')">void</button><br><br>
+                <button class="btn" type="button" onclick="next('test2','test3')">None</button><br><br>
+            </form>
+
+            <form action="" id="test3" class="test">
+                <br><br>
+                <h3>Which of the following will run without errors?</h3><br><br>
+                <button class="btn" type="button" onclick="next('test3','test4')">round(45.8)</button><br><br>
+                <button class="btn" type="button"
+                    onclick="nextQues('test3','test4')">round(6352.898,2,5)</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test3','test4')">round()</button><br><br>
+                <button class="btn" type="button"
+                    onclick="nextQues('test3','test4')">round(7463.123,2,1)</button><br><br>
+            </form>
+
+            <form action="" id="test4" class="test">
+                <br><br>
+                <h3>In order to store values in terms of key and value we use what core data type.</h3><br><br>
+                <button class="btn" type="button" onclick="nextQues('test4','test5')">List</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test4','test5')">Tuple</button><br><br>
+                <button class="btn" type="button" onclick="next('test4','test5')">Dictionary</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test4','test5')">Class</button><br><br>
+            </form>
+
+            <form action="" id="test5" class="test">
+                <br><br>
+                <h3>What is the return value of trunc()?</h3><br><br>
+                <button class="btn" type="button" onclick="next('test5','end')">int</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test5','end')">float</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test5','end')">bool</button><br><br>
+                <button class="btn" type="button" onclick="nextQues('test5','end')">None</button><br><br>
+            </form>
+
+            <div id="end">
+                <h1>Thanks for Giving the Test</h1><br><br>
+                <button type="button" class="btn btn-success"
+                    onclick="document.getElementById('end').style.display='none'; document.getElementById('dashboard').style.display='block';">
+                    Go to Dashboard
+                </button>
+            </div>
+            <div id="result">
+                <br>
+                <h1>Result</h1>
+                <button type="button" class="btn btn-danger"
+                    onclick="document.getElementById('result').style.display='none'; document.getElementById('dashboard').style.display='block';">Back</button><br><br>
+                <table id="table" class="col-md-6 table table-striped table-secondary rounded-lg">
+
+                    <thead>
+                        <tr>
+                            <th>Candidates Details</th>
+                            <th>Result</th>
+                        <tr></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td><span id="name"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Roll no.</th>
+                            <td><span id="roll"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Marks Obtained</th>
+                            <td><span id="marksOb"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Total Marks</th>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td><span id="st"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
