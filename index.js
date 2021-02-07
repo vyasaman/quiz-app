@@ -15,6 +15,7 @@ var in_id = '';
 var pass = '';
 var u_name = '';
 var u_roll = '';
+var flag = true;
 function login() {
     in_id = document.getElementById('id').value;
     in_pass = document.getElementById('pass').value;
@@ -22,11 +23,17 @@ function login() {
         if (user[i].id == in_id && user[i].pass == in_pass) {
             u_name = user[i].name;
             u_roll = user[i].roll;
+            flag = true;
             document.getElementById('login').style.display = 'none';
             document.getElementById('dashboard').style.display = 'block';
-
-
+            break;
         }
+        else {
+            flag = false;
+        }
+    }
+    if (flag == false) {
+        alert('Invalid Input.')
     }
 }
 function test() {
